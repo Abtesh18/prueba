@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Actualizar Receta</title>
+</head>
+<body>
+    <h1>Actualizar Receta</h1>
+    <form method="POST">
+        Nombre Actual: <input type="text" name="old_name" required><br>
+        Nuevo Nombre (opcional): <input type="text" name="new_name"><br>
+        Nuevos Ingredientes (opcional): <input type="text" name="new_ingredients"><br>
+        Nuevos Pasos (opcional): <input type="text" name="new_steps"><br>
+        <input type="submit" value="Actualizar">
+    </form>
+    <a href="{{ url_for('index') }}">Volver al inicio</a>
+</body>
+</html>
+
+
+

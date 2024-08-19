@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestión de Recetas</title>
+</head>
+<body>
+    <h1>Gestión de Recetas</h1>
+    <a href="{{ url_for('add_recipe') }}">Agregar Receta</a>
+    <a href="{{ url_for('update_recipe') }}">Actualizar Receta</a>
+    <a href="{{ url_for('delete_recipe') }}">Eliminar Receta</a>
+    <a href="{{ url_for('list_recipes') }}">Listar Recetas</a>
+    <a href="{{ url_for('search_recipe') }}">Buscar Receta</a>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+</body>
+</html>

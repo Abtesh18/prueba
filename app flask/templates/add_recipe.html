@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar Receta</title>
+</head>
+<body>
+    <h1>Agregar Receta</h1>
+    <form method="POST">
+        Nombre: <input type="text" name="name" required><br>
+        Ingredientes (separados por coma): <input type="text" name="ingredients" required><br>
+        Pasos (separados por punto y coma): <input type="text" name="steps" required><br>
+        <input type="submit" value="Agregar">
+    </form>
+    <a href="{{ url_for('index') }}">Volver al inicio</a>
+</body>
+</html>
+

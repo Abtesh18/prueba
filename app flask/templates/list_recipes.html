@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listar Recetas</title>
+</head>
+<body>
+    <h1>Listado de Recetas</h1>
+    {% if recipes %}
+        <ul>
+            {% for name, recipe in recipes.items() %}
+                <li>{{ name }}: Ingredientes: {{ recipe['ingredientes'] }}, Pasos: {{ recipe['pasos'] }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay recetas en la base de datos.</p>
+    {% endif %}
+    <a href="{{ url_for('index') }}">Volver al inicio</a>
+</body>
+</html>
+
+
+
+

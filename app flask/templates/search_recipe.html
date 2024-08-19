@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscar Receta</title>
+</head>
+<body>
+    <h1>Buscar Receta</h1>
+    <form method="POST">
+        Nombre: <input type="text" name="name" required><br>
+        <input type="submit" value="Buscar">
+    </form>
+    {% if recipe %}
+        <h2>Receta Encontrada</h2>
+        <p>Nombre: {{ recipe['nombre'] }}</p>
+        <p>Ingredientes: {{ recipe['ingredientes'] }}</p>
+        <p>Pasos: {{ recipe['pasos'] }}</p>
+    {% elif recipe is not none %}
+        <p>Receta no encontrada.</p>
+    {% endif %}
+    <a href="{{ url_for('index') }}">Volver al inicio</a>
+</body>
+</html>
+
