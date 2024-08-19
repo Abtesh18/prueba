@@ -1,0 +1,4 @@
+_id,nombre,ingredientes[0],ingredientes[1],ingredientes[2],ingredientes[3],pasos[0],pasos[1],pasos[2],pasos[3],pasos[4]
+66b2e0f0ad49ad61ac35c5bb,pico de gallo,cebolla;tomate,,,,picar,,,,
+66b2e168ad49ad61ac35c5bc,pollo frito,pollo;pan rallado;huevo;aceite,,,,pasar el pollo por huevo,luego por pan rallado,luego tirar al aceite caliente,,
+66b2e25d5a31385505b144ff,pure de papas,papas,leche,mantequilla,agua,poner el agua a hervir,luego tirar las papas,una vez suaves sacar y machacar,agregar leche y mantequilla,seguir machacando hasta tener la textura deseable
