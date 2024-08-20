@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h2>Actualizar Receta Existente</h2>
+<form action="{{ url_for('update_recipe') }}" method="post">
+    <label for="old_name">Nombre Actual de la Receta:</label>
+    <input type="text" id="old_name" name="old_name" required>
+    
+    <label for="new_name">Nuevo Nombre de la Receta (opcional):</label>
+    <input type="text" id="new_name" name="new_name">
+    
+    <label for="new_ingredients">Nuevos Ingredientes (separados por coma, opcional):</label>
+    <input type="text" id="new_ingredients" name="new_ingredients">
+    
+    <label for="new_steps">Nuevos Pasos (separados por punto y coma, opcional):</label>
+    <textarea id="new_steps" name="new_steps" rows="5"></textarea>
+    
+    <button type="submit">Actualizar Receta</button>
+</form>
+{% endblock %}
+

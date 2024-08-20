@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h2>Buscar Receta</h2>
+<form action="{{ url_for('search_recipe') }}" method="post">
+    <label for="name">Nombre de la Receta:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <button type="submit">Buscar Receta</button>
+</form>
+
+{% if recipe %}
+    <h3>Receta Encontrada</h3>
+    <p><strong>Nombre:</strong> {{ recipe.nombre }}</p>
+    <p><strong>Ingredientes:</strong> {{ recipe.ingredientes | join(', ') }}</p>
+    <p><strong>Pasos:</strong> {{ recipe.pasos | join('; ') }}</p>
+{% elif request.method == 'POST' %}
+    <p>No se encontró la receta.</p>
+{% endif %}
+{% endblock %}
+

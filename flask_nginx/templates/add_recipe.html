@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h2>Agregar Nueva Receta</h2>
+<form action="{{ url_for('add_recipe') }}" method="post">
+    <label for="name">Nombre de la Receta:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="ingredients">Ingredientes (separados por coma):</label>
+    <input type="text" id="ingredients" name="ingredients" required>
+    
+    <label for="steps">Pasos (separados por punto y coma):</label>
+    <textarea id="steps" name="steps" rows="5" required></textarea>
+    
+    <button type="submit">Agregar Receta</button>
+</form>
+{% endblock %}
+

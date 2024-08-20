@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h2>Listado de Recetas</h2>
+{% if recipes %}
+    <ul>
+        {% for name, recipe in recipes.items() %}
+            <li>
+                <strong>{{ name }}</strong>
+                <ul>
+                    <li><strong>Ingredientes:</strong> {{ recipe.ingredientes | join(', ') }}</li>
+                    <li><strong>Pasos:</strong> {{ recipe.pasos | join('; ') }}</li>
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay recetas en la base de datos.</p>
+{% endif %}
+{% endblock %}
+
